@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 페이지입니다.</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/join.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrap_join">
+      <section id="join">
+        <div class="inner">
+          <h1>
+            <a href="../index.html"
+              ><img src="../img/header/logo.png" alt="하이트진로 워드로고"
+            /></a>
+          </h1>
+          <h2>하이트 진로 회원가입</h2>
+          <form action="../html/joinresult.html" method="get" id="member">
+            <fieldset>
+              <legend class="hidden">회원가입 폼 입력 양식</legend>
+              <table>
+                <caption class="hidden">
+                  회원가입을 위한 이름, 아이디, 비밀번호, 이메일, 연락처,
+                  생년월일, 성별, 메일, SMS 수신여부 입력할 테이블
+                </caption>
+                <tbody>
+                  <!-- 이름 -->
+                  <tr>
+                    <th scope="row"><label for="user_name">이름</label></th>
+                    <td>
+                      <input
+                        type="text"
+                        name="user_name"
+                        id="user_name"
+                        placeholder="성함을 입력하세요"
+                      />
+                    </td>
+                  </tr>
+                  <!-- 회원 ID -->
+                  <tr>
+                    <th scope="row"><label for="userid">아이디</label></th>
+                    <td>
+                      <input
+                        type="text"
+                        name="userid"
+                        id="userid"
+                        placeholder="아이디를 입력하세요"
+                      />
+                      <!-- th의 for 과 td의 id가 일치해야한다. name에 값을 작성해주면 백엔드 개발자가 확인할 때 유용하다.(name = 백엔드 개발자에게 넘겨주는 것) -->
+                    </td>
+                  </tr>
+                  <!-- 비밀번호 -->
+                  <tr>
+                    <th scope="row"><label for="pwd1">비밀번호</label></th>
+                    <td>
+                      <input
+                        type="password"
+                        name="pwd1"
+                        id="pwd1"
+                        placeholder="비밀번호를 입력하세요"
+                      />
+                      <div id="toggleBtn"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="pwd2">비밀번호 재입력</label>
+                    </th>
+                    <td>
+                      <input
+                        type="password"
+                        name="pwd2"
+                        id="pwd2"
+                        placeholder="비밀번호를 재입력하세요"
+                      />
+                    </td>
+                  </tr>
+                  <!-- E-mail -->
+                  <tr>
+                    <th scope="row"><label for="email">이메일</label></th>
+                    <td>
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="이메일주소를 입력하세요"
+                      />
+                    </td>
+                  </tr>
+                  <!-- 연락처 -->
+                  <tr>
+                    <th scope="row">
+                      <label for="number">연락처</label>
+                    </th>
+                    <td>
+                      <select name="first-number" id="number">
+                        <option value="number">010</option>
+                        <option value="number">011</option>
+                        <option value="number">016</option>
+                        <option value="number">017</option>
+                        <option value="number">018</option>
+                        <option value="number">019</option>
+                        <option value="number">070</option>
+                        <option value="number">02</option>
+                        <option value="number">031</option>
+                        <option value="number">032</option>
+                        <option value="number">033</option>
+                        <option value="number">041</option>
+                        <option value="number">042</option>
+                        <option value="number">043</option>
+                        <option value="number">044</option>
+                      </select>
+                      <input type="text" name="middle-number" id="number" />
+                      <input type="text" name="last-number" id="number" />
+                    </td>
+                  </tr>
+                  <!-- 생년월일 -->
+                  <tr>
+                    <th scope="row">
+                      <label for="birth_day">생년월일</label>
+                    </th>
+                    <td>
+                      <input
+                        type="text"
+                        name="year"
+                        id="birth_day"
+                        placeholder="태어난 년도를 입력하세요"
+                      />
+                      <select name="mounth" id="birth_day">
+                        <option value="birth_day">01월</option>
+                        <option value="birth_day">02월</option>
+                        <option value="birth_day">03월</option>
+                        <option value="birth_day">04월</option>
+                        <option value="birth_day">05월</option>
+                        <option value="birth_day">06월</option>
+                        <option value="birth_day">07월</option>
+                        <option value="birth_day">08월</option>
+                        <option value="birth_day">09월</option>
+                        <option value="birth_day">10월</option>
+                        <option value="birth_day">11월</option>
+                        <option value="birth_day">12월</option>
+                      </select>
+
+                      <select name="day" id="birth_day">
+                        <option value="birth_day">1일</option>
+                        <option value="birth_day">2일</option>
+                        <option value="birth_day">3일</option>
+                        <option value="birth_day">4일</option>
+                        <option value="birth_day">5일</option>
+                        <option value="birth_day">6일</option>
+                        <option value="birth_day">7일</option>
+                        <option value="birth_day">8일</option>
+                        <option value="birth_day">9일</option>
+                        <option value="birth_day">10일</option>
+                        <option value="birth_day">11일</option>
+                        <option value="birth_day">12일</option>
+                        <option value="birth_day">13일</option>
+                        <option value="birth_day">14일</option>
+                        <option value="birth_day">15일</option>
+                        <option value="birth_day">16일</option>
+                        <option value="birth_day">17일</option>
+                        <option value="birth_day">18일</option>
+                        <option value="birth_day">19일</option>
+                        <option value="birth_day">20일</option>
+                        <option value="birth_day">21일</option>
+                        <option value="birth_day">22일</option>
+                        <option value="birth_day">23일</option>
+                        <option value="birth_day">24일</option>
+                        <option value="birth_day">25일</option>
+                        <option value="birth_day">26일</option>
+                        <option value="birth_day">27일</option>
+                        <option value="birth_day">28일</option>
+                        <option value="birth_day">29일</option>
+                        <option value="birth_day">30일</option>
+                        <option value="birth_day">31일</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <!-- 성별 -->
+                  <tr>
+                    <th scope="row">성별</th>
+                    <td>
+                      <label for="male">남성</label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male"
+                      />
+                      <label for="female">여성</label>
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                      />
+                      <!-- 같은 name 값의 value로 묶어주어야 둘 중 하나만 선택이 가능해진다. 
+                      사용자가 입력한 정보값을 넘겨주기 위해서 value 값이 추가되어야 한다. -->
+                    </td>
+                  </tr>
+                  <!-- 메일수신여부 -->
+                  <tr>
+                    <th scope="row">메일수신여부</th>
+                    <td>
+                      <label for="yes">예</label>
+                      <input
+                        type="radio"
+                        name="mail_agree"
+                        id="mail_agree"
+                        value="mail_agree"
+                      />
+                      <label for="no">아니오</label>
+                      <input
+                        type="radio"
+                        name="mail_agree"
+                        id="mail_agree"
+                        value="mail_agree"
+                      />
+                      <!-- 같은 name 값의 value로 묶어주어야 둘 중 하나만 선택이 가능해진다. 
+                      사용자가 입력한 정보값을 넘겨주기 위해서 value 값이 추가되어야 한다. -->
+                    </td>
+                  </tr>
+                  <!-- SMS 수신여부 -->
+                  <tr>
+                    <th scope="row">SMS 수신여부</th>
+                    <td>
+                      <label for="yes">예</label>
+                      <input
+                        type="radio"
+                        name="sms_agree"
+                        id="sms_agree"
+                        value="sms_agree"
+                      />
+                      <label for="no">아니오</label>
+                      <input
+                        type="radio"
+                        name="sms_agree"
+                        id="sms_agree"
+                        value="sms_agree"
+                      />
+                      <!-- 같은 name 값의 value로 묶어주어야 둘 중 하나만 선택이 가능해진다. 
+                      사용자가 입력한 정보값을 넘겨주기 위해서 value 값이 추가되어야 한다. -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="2">
+                      <input type="reset" value="취소" />
+                      <input type="submit" value="완료" />
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

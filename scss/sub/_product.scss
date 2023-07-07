@@ -1,0 +1,320 @@
+#product-contents {
+  width: 100%;
+  height: 150vh;
+  position: relative;
+
+  .wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    article {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f1f6;
+      font-family: "Noto Sans CJK KR";
+      &.on {
+        display: block;
+      }
+    }
+
+    #iseul {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sub_product/iseul.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .product_inner {
+        width: 1500px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 15%;
+          right: 1%;
+        }
+
+        .first_paragraph {
+          position: absolute;
+          top: 40%;
+          left: 0;
+
+          h3 {
+            font-weight: 500;
+            font-size: 55px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 200;
+            font-size: 40px;
+          }
+        }
+
+        .second_paraghaph {
+          position: absolute;
+          top: 60%;
+          left: 0;
+
+          h3 {
+            font-weight: 500;
+            font-size: 55px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 200;
+            font-size: 40px;
+          }
+        }
+      }
+    }
+
+    #jinro {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sub_product/jinro.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .product_inner {
+        width: 1500px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          position: absolute;
+          bottom: 2%;
+          left: 15vw;
+        }
+
+        .first_paragraph {
+          position: absolute;
+          top: 3%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          h3 {
+            font-weight: 500;
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+        }
+
+        .second_paraghaph {
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    #kelly {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sub_product/kelly.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .product_inner {
+        width: 1500px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 15%;
+          right: 1%;
+        }
+
+        .first_paragraph {
+          position: absolute;
+          top: 15%;
+          left: 0;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 200;
+            font-size: 30px;
+          }
+        }
+
+        .second_paraghaph {
+          position: absolute;
+          top: 40%;
+          left: 0;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 200;
+            font-size: 30px;
+          }
+        }
+
+        .third_paragraph {
+          position: absolute;
+          top: 65%;
+          left: 0;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 200;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    #terra {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sub_product/terra.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .product_inner {
+        width: 1500px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 15%;
+          left: 1%;
+        }
+
+        .first_paragraph {
+          position: absolute;
+          top: 30%;
+          right: 7%;
+          text-align: left;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+        }
+
+        .second_paraghaph {
+          position: absolute;
+          top: 60%;
+          right: 2%;
+          text-align: left;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    #maehwasu {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sub_product/maehwasu.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .product_inner {
+        width: 1500px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 15%;
+          left: 8.5%;
+        }
+
+        .first_paragraph {
+          position: absolute;
+          top: 30%;
+          right: 7%;
+          text-align: left;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+        }
+
+        .second_paraghaph {
+          position: absolute;
+          top: 58%;
+          right: 2%;
+          text-align: left;
+
+          h3 {
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-weight: 300;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

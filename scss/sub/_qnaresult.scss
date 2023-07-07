@@ -1,0 +1,121 @@
+body {
+  background-color: #f2f1f6;
+
+  #qnaresult {
+    width: 800px;
+    min-height: 800px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0d96d4;
+    font-family: "Noto Sans CJK KR";
+    color: #fff;
+    text-align: center;
+
+    h2 {
+      padding-top: 200px;
+      font-size: 35px;
+      font-weight: 400;
+    }
+
+    p {
+      padding-top: 100px;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 100px;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  // 뒷배경
+
+  .result_bg {
+    .bubble_1 {
+      width: 200px;
+      height: 200px;
+      background-image: linear-gradient(180deg, #0d96d4bc, #24418bbc);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 3%;
+      left: 15%;
+      animation: pulsate-fwd 6s ease-in-out infinite both;
+
+      @keyframes pulsate-fwd {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    }
+    .bubble_2 {
+      width: 300px;
+      height: 300px;
+      background-image: linear-gradient(45deg, #0d96d4bc, #24418bbc);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 60%;
+      left: 2%;
+      animation: pulsate-fwd 5.5s ease-in-out infinite both;
+
+      @keyframes pulsate-fwd {
+        0% {
+          transform: translateY(-50px);
+        }
+        50% {
+          transform: translateY(100px);
+        }
+        100% {
+          transform: translateY(-50px);
+        }
+      }
+    }
+    .bubble_3 {
+      width: 600px;
+      height: 600px;
+      background-image: linear-gradient(-220deg, #0d95d4bc, #24418bbc);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 30%;
+      left: 80%;
+      animation: pulsate-fwd 4.5s ease-in-out infinite both;
+
+      @keyframes pulsate-fwd {
+        0% {
+          transform: translateY(20px);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+        100% {
+          transform: translateY(20px);
+        }
+      }
+    }
+  }
+}

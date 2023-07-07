@@ -1,0 +1,265 @@
+fieldset {
+  border: none;
+}
+.wrap_join {
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    background-image: url(../img/join/join_BG.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.25;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  #join {
+    width: 100%;
+    padding: 20px 0px;
+    position: relative;
+
+    .inner {
+      width: 1500px;
+      margin: 0 auto;
+
+      h1 {
+        position: absolute;
+        top: 0;
+        left: 5%;
+      }
+
+      h2 {
+        font: 400 45px/1 "Noto Sans KR";
+        color: #24418b;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      table {
+        border-top: 3px solid #0d96d4;
+        border-bottom: 3px solid #0d96d4;
+        font-family: "S-CoreDream-3Light";
+        margin: 0 auto;
+
+        th,
+        td {
+          border-bottom: 1.5px solid #0d96d4;
+          padding: 12px 20px;
+        }
+
+        th {
+          width: 20%;
+
+          input[type="reset"],
+          input[type="submit"] {
+            width: 30%;
+            height: 40px;
+            border: 1px solid #0d96d4;
+            background-color: #24418b;
+            font: 400 14px/40px "Noto Sans KR";
+            color: #fff;
+            cursor: pointer;
+            margin: 10px;
+            //   font-size : 0 으로 공백을 없앤 뒤 값을 주어도 되지만 번거롭다면 바로 값을 부여해도 괜찮다.
+
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+
+        td {
+          border-left: 1px solid #0d96d4;
+          position: relative;
+
+          #toggleBtn {
+            position: absolute;
+            top: 32px;
+            right: 50%;
+            transform: translateY(-50%);
+            width: 34px;
+            height: 34px;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+              content: "\f06e";
+              font-family: fontAwesome;
+            }
+            &.hide::before {
+              content: "\f070";
+              font-family: fontAwesome;
+            }
+          }
+
+          input[type="text"],
+          input[type="password"],
+          select {
+            position: relative;
+            width: 40%;
+            background-color: rgba(0, 0, 0, 0.03);
+            padding: 10px;
+            border: 1px solid #aaa;
+          }
+
+          #number {
+            width: 30%;
+          }
+
+          #birth_day {
+            width: 30%;
+          }
+
+          input[type="radio"] {
+            margin-right: 30px;
+          }
+
+          textarea {
+            resize: none;
+            width: 60%;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            border: 1px solid #aaa;
+          }
+
+          // 동적으로 생성될 에러메세지 스타일
+          p {
+            font: 12px/1 "Noto Sans KR";
+            color: red;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #joinresult {
+    width: 800px;
+    min-height: 800px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0d96d4;
+    font-family: "Noto Sans CJK KR";
+    color: #fff;
+    text-align: center;
+
+    h2 {
+      padding-top: 200px;
+      font-size: 35px;
+      font-weight: 400;
+    }
+
+    p {
+      padding-top: 100px;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 100px;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  // 뒷배경
+
+  .result_bg {
+    .bubble_1 {
+      width: 200px;
+      height: 200px;
+      background-image: linear-gradient(180deg, #0d96d4bc, #24418bbc);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 3%;
+      left: 15%;
+      animation: pulsate-fwd 6s ease-in-out infinite both;
+
+      @keyframes pulsate-fwd {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    }
+    .bubble_2 {
+      width: 300px;
+      height: 300px;
+      background-image: linear-gradient(45deg, #0d96d4bc, #24418bbc);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 60%;
+      left: 2%;
+      animation: pulsate-fwd 5.5s ease-in-out infinite both;
+
+      @keyframes pulsate-fwd {
+        0% {
+          transform: translateY(-50px);
+        }
+        50% {
+          transform: translateY(100px);
+        }
+        100% {
+          transform: translateY(-50px);
+        }
+      }
+    }
+    .bubble_3 {
+      width: 600px;
+      height: 600px;
+      background-image: linear-gradient(-220deg, #0d95d4bc, #24418bbc);
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      top: 30%;
+      left: 80%;
+      animation: pulsate-fwd 4.5s ease-in-out infinite both;
+
+      @keyframes pulsate-fwd {
+        0% {
+          transform: translateY(20px);
+        }
+        50% {
+          transform: translateY(-50px);
+        }
+        100% {
+          transform: translateY(20px);
+        }
+      }
+    }
+  }
+}

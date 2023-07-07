@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUSTOMER</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/customer.js"></script>
+    <script defer src="../js/community.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="../index.html" class="logo"></a>
+      </h1>
+
+      <button class="gnb_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="gnbBg"></div>
+      <nav class="gnb">
+        <ul>
+          <li>
+            <a href="./company.html">COMPANY</a>
+            <!-- <ul class="sub">
+              <li><a href="./html/company.html#greeting">인사말</a></li>
+              <li>
+                <a href="./html/company.html#environmenta"
+                  >지속가능환경경영</a
+                >
+              </li>
+              <li>
+                <a href="./html/company.html#food_safety">식품안전경영</a>
+              </li>
+            </ul> -->
+          </li>
+          <li>
+            <a href="./product.html">PRODUCT</a>
+            <!-- <ul class="sub">
+              <li><a href="./html/product.html#iseul">참이슬</a></li>
+              <li><a href="./html/product.html#jinro">진로이즈백</a></li>
+              <li><a href="./html/product.html#kelly">켈리</a></li>
+              <li><a href="./html/product.html#terra">테라</a></li>
+              <li><a href="./html/product.html#maehwasu">매화수</a></li>
+            </ul> -->
+          </li>
+          <li>
+            <a href="./customer.html">CUSTOMER</a>
+            <!-- <ul class="sub">
+              <li><a href="./html/customer.html#qna">Q&A</a></li>
+              <li>
+                <a href="./html/customer.html#community">고객 게시판</a>
+              </li>
+            </ul> -->
+          </li>
+        </ul>
+        <ul class="member">
+          <li><a href="./login.html">Log in</a></li>
+          <li><a href="./join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="sub_visual">
+      <div class="content-top">
+        <h2>CUSTOMER</h2>
+        <img src="../img/sub_customer/customer_visual.jpg" alt="vision" />
+      </div>
+      <div class="content-bottom">
+        <ul>
+          <li class="on"><a href="customer.html#qna">Q&A</a></li>
+          <li><a href="customer.html#community">고객 게시판</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="customer-contents">
+      <div class="wrap">
+        <article id="qna" class="on active">
+          <section class="headline">
+            <h2>Q & A</h2>
+            <span>궁금한 내용을 질문하시면 답변해드립니다.</span>
+          </section>
+          <section class="guide">
+            <h4>고객 여러분들의 아낌없는 소리를 귀담아 듣겠습니다.</h4>
+            <p>
+              칭찬, 제안, 궁금증에 대하여 질문을 해주시기 바랍니다.<br />
+              특히 실명확인 후 연락 가능하신 전화번호 기재를 꼭 부탁드리며,<br />
+              회사 및 개인의 대한 비방 및 저해성 글에 대해서는 삭제 조치 되오니
+              이점 유의하시기 바랍니다.
+            </p>
+            <ul>
+              상담 운영시간
+              <li>평일 08:30 ~ 22:00 / 주말 및 공휴일 09:00 ~ 18:00</li>
+            </ul>
+            <ul>
+              상담내역 확인
+              <li>
+                상담 신청 시 작성한 이메일을 통해서 확인 하이트진로 홈페이지
+                로그인 후 MY Q&A에서 확인 (상담내역은 비회원 상담 최대 6개월,
+                회원 상담 최대 3년까지 확인하실 수 있습니다.)
+              </li>
+            </ul>
+            <ul>
+              주의사항
+              <li>
+                상담은 접수된 건부터 순차적으로 진행됩니다. <br />답변 완료
+                시까지는 평균적으로 영업일 기준 2일이 소요되며, 문의가 많은 경우
+                다소 지연될 수 있습니다. <br />상담 접수 시 답변 받으실 메일
+                주소 및 연락처를 정확하게 입력해주시기 바랍니다.
+              </li>
+            </ul>
+          </section>
+          <section id="qnatxt">
+            <div class="inner">
+              <form action="qnaresult.html" method="get" id="qnatxt">
+                <fieldset>
+                  <legend class="hidden">Q & A 입력 양식</legend>
+                  <table>
+                    <caption class="hidden">
+                      Q&A 입력 양식
+                    </caption>
+                    <tbody>
+                      <!-- 문의유형 -->
+                      <tr>
+                        <th scope="row">
+                          <label for="inquirytype">문의유형</label>
+                        </th>
+                        <td>
+                          <select name="inquirytype" id="inquirytype">
+                            <option value="praise">칭찬</option>
+                            <option value="inquiry">문의</option>
+                            <option value="complaints">불만</option>
+                            <option value="proposal">제안</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <!-- 이름 -->
+                      <tr>
+                        <th scope="row"><label for="name">성함</label></th>
+                        <td>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="이름을 입력하세요"
+                          />
+                        </td>
+                      </tr>
+                      <!-- 연락처 -->
+                      <tr>
+                        <th scope="row">
+                          <label for="number">연락처</label>
+                        </th>
+                        <td>
+                          <select name="first-number" id="number">
+                            <option value="">010</option>
+                            <option value="">011</option>
+                            <option value="">016</option>
+                            <option value="">017</option>
+                            <option value="">018</option>
+                            <option value="">019</option>
+                            <option value="">070</option>
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                            <option value="">033</option>
+                            <option value="">041</option>
+                            <option value="">042</option>
+                            <option value="">043</option>
+                            <option value="">044</option>
+                          </select>
+                          <input type="text" name="middle-number" id="number" />
+                          <input type="text" name="last-number" id="number" />
+                        </td>
+                      </tr>
+                      <!-- E-mail -->
+                      <tr>
+                        <th scope="row"><label for="email">E-mail</label></th>
+                        <td>
+                          <input
+                            type="text"
+                            name="email"
+                            id="email"
+                            placeholder="이메일주소를 입력하세요."
+                          />
+                        </td>
+                      </tr>
+                      <!-- 문의 제목 -->
+                      <tr>
+                        <th scope="row"><label for="title">문의제목</label></th>
+                        <td>
+                          <textarea
+                            name="title"
+                            id="title"
+                            placeholder="문의하시는 내용의 제목을 입력해주세요."
+                          ></textarea>
+                        </td>
+                      </tr>
+
+                      <!-- 문의 내용 -->
+                      <tr>
+                        <th scope="row">
+                          <label for="comments">문의내용</label>
+                        </th>
+                        <td>
+                          <textarea
+                            name="comments"
+                            id="comments"
+                            placeholder="문의하시는 내용을 입력해주세요."
+                          ></textarea>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th colspan="2">
+                          <input type="reset" value="취소" />
+                          <input type="submit" value="작성완료" />
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </fieldset>
+              </form>
+            </div>
+          </section>
+        </article>
+
+        <article id="community">
+          <h2>고객게시판</h2>
+          <ul class="">
+            <li data-target="content1">
+              <a href="#">hite는 무슨 뜻인가요?</a>
+              <span>2023-06-30</span>
+            </li>
+            <li data-target="content2">
+              <a href="#">술을 직접 싸게 구입할 수 있나요?</a>
+              <span>2023-06-28</span>
+            </li>
+            <li data-target="content3">
+              <a href="#">소주병은 왜 녹색인가요?</a>
+              <span>2023-06-15</span>
+            </li>
+            <li data-target="content4">
+              <a href="#">생산되는 맥주 제품 종류를 알고싶어요.</a>
+              <span>2023-06-14</span>
+            </li>
+            <li data-target="content5">
+              <a href="#">실명인증이 안되요.</a>
+              <span>2023-06-11</span>
+            </li>
+            <li data-target="content6">
+              <a href="#">하이트진로 공장은 어디에 있나요?</a>
+              <span>2023-06-08</span>
+            </li>
+            <li data-target="content7">
+              <a href="#">페트 제품이 얼었는데 녹여서 먹어도 되나요?</a>
+              <span>2023-06-02</span>
+            </li>
+            <li data-target="content8">
+              <a href="#">맥주는 어떻게 마셔야 제일 맛있나요?</a>
+              <span>2023-05-31</span>
+            </li>
+            <li data-target="content9">
+              <a href="#">맥주 맛이 싱겁게 느껴지는 이유는?</a>
+              <span>2023-05-27</span>
+            </li>
+            <li data-target="content10">
+              <a href="#">가게에 빈병을 가져다 주었는데 돈을 제대로 안줘요.</a>
+              <span>2023-05-22</span>
+            </li>
+            <li data-target="content11">
+              <a href="#">페트 제품의 품질유지기한이 왜 짧은가요?</a>
+              <span>2023-05-18</span>
+            </li>
+            <li data-target="content12">
+              <a href="#">주류교환 티켓에 유효기간이 있나요?</a>
+              <span>2023-05-11</span>
+            </li>
+          </ul>
+
+          <ul id="answer">
+            <li id="content1" class="content">
+              <img src="../img/sub_customer/community/answer01.png" alt="" />
+            </li>
+            <li id="content2" class="content">
+              <img src="../img/sub_customer/community/answer02.png" alt="" />
+            </li>
+            <li id="content3" class="content">
+              <img src="../img/sub_customer/community/answer03.png" alt="" />
+            </li>
+            <li id="content4" class="content">
+              <img src="../img/sub_customer/community/answer04.png" alt="" />
+            </li>
+            <li id="content5" class="content">
+              <img src="../img/sub_customer/community/answer05.png" alt="" />
+            </li>
+            <li id="content6" class="content">
+              <img src="../img/sub_customer/community/answer06.png" alt="" />
+            </li>
+            <li id="content7" class="content">
+              <img src="../img/sub_customer/community/answer07.png" alt="" />
+            </li>
+            <li id="content8" class="content">
+              <img src="../img/sub_customer/community/answer08.png" alt="" />
+            </li>
+            <li id="content9" class="content">
+              <img src="../img/sub_customer/community/answer09.png" alt="" />
+            </li>
+            <li id="content10" class="content">
+              <img src="../img/sub_customer/community/answer10.png" alt="" />
+            </li>
+            <li id="content11" class="content">
+              <img src="../img/sub_customer/community/answer11.png" alt="" />
+            </li>
+            <li id="content12" class="content">
+              <img src="../img/sub_customer/community/answer12.png" alt="" />
+            </li>
+            <button id="close">x 닫기</button>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div class="inner">
+        <div class="left">
+          <h2>
+            <img
+              src="../img/footer/footer_logo.png"
+              alt="하이트진로_footer_logo"
+            />
+          </h2>
+          <ul class="f_menu">
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">회원이용약관</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+          </ul>
+          <p>
+            (06075) 서울특별시 강남구 영동대로 714 하이트진로빌딩<br />
+            대표전화 080-210-0150 / 사업자등록번호 214-81-00777<br />
+            Copyright© 2016 HITEJINRO CO.LTD. ALL RIGHTS RESERVED.
+          </p>
+        </div>
+        <div class="right">
+          <ul class="f_sns">
+            <li>
+              <a href="https://www.beer2day.com/"
+                ><img src="../img/footer/sns_blog.png" alt="하이트진로 blog"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/official.jinro/"
+                ><img
+                  src="../img/footer/sns_instagram.png"
+                  alt="하이트진로 instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/hitevideo"
+                ><img
+                  src="../img/footer/sns_youtube.png"
+                  alt="하이트진로 youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Beer2DAY"
+                ><img
+                  src="../img/footer/sns_twitter.png"
+                  alt="하이트진로 twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/HITEJINRO.kr"
+                ><img
+                  src="../img/footer/sns_facebook.png"
+                  alt="하이트진로 facebook"
+              /></a>
+            </li>
+          </ul>
+          <span>
+            경고 : 지나친 음주는 뇌졸중, <br />
+            기억력 손상이나 치매를 유발합니다.<br />
+            임신 중 음주는 기형아 출생 <br />
+            위험을 높입니다.| ㈜하이트진로<br />
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

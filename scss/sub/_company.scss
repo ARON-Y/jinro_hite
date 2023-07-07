@@ -1,0 +1,142 @@
+#company-contents {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+
+  .wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    article {
+      display: none;
+      width: 100%;
+      height: 100%;
+      &.on {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    #greeting {
+      width: 1500px;
+      margin: 0 auto;
+      background-color: #fff;
+
+      .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          padding-bottom: 1050px;
+        }
+
+        #history_slider {
+          width: 1440px;
+          height: 720px;
+          position: absolute;
+          bottom: 10%;
+          left: 0;
+          overflow: hidden;
+
+          .inner_history {
+            width: 100%;
+            height: 100%;
+
+            .history {
+              width: 700%; //100  li의 갯수
+              height: 100%;
+
+              > li {
+                width: calc(100% / 7); //100 li의 갯수
+                height: 100%;
+                float: left;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transition: all 0.5s;
+                object-fit: cover;
+
+                &:nth-of-type(1) {
+                  background-image: url(../img/sub_company/history_01.jpg);
+                }
+
+                &:nth-of-type(2) {
+                  background-image: url(../img/sub_company/history_02.jpg);
+                }
+
+                &:nth-of-type(3) {
+                  background-image: url(../img/sub_company/history_03.jpg);
+                }
+
+                &:nth-of-type(4) {
+                  background-image: url(../img/sub_company/history_04.jpg);
+                }
+
+                &:nth-of-type(5) {
+                  background-image: url(../img/sub_company/history_05.jpg);
+                }
+
+                &:nth-of-type(6) {
+                  background-image: url(../img/sub_company/history_06.jpg);
+                }
+
+                &:nth-of-type(7) {
+                  background-image: url(../img/sub_company/history_07.jpg);
+                }
+              }
+            }
+
+            .his_btns {
+              position: absolute;
+              bottom: 5vh;
+              width: 100%;
+
+              > li {
+                width: 6%;
+                padding: 20px;
+                margin-left: 94%;
+                perspective: 500px;
+
+                > a {
+                  display: block;
+                  width: 100%;
+                  height: 40px;
+                  font: bold 12px/40px "arial";
+                  color: #101c3b;
+                  background-color: #97d5f1;
+                  text-align: center;
+                  border: 1px solid #fff;
+                  border-radius: 20px;
+                  transition: 1s;
+                  cursor: pointer;
+                }
+
+                &.on {
+                  a {
+                    background-color: #fff;
+                    color: #333;
+                    transform: rotateY(360deg);
+                    perspective: 500px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #environmenta,
+    #food_safety {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
